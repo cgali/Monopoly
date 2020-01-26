@@ -4,7 +4,7 @@ The objective of the monopoly game is to buy board streets and accumulate as man
 ## MVP
 ### Technique
 * HTML5.
-* Canvas.
+* DOM.
 * Js Vanilla.
 
 ### Game States
