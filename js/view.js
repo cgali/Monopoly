@@ -5,14 +5,14 @@ class View{
 
     }
 
-    throwDice(callback) {
+    throwDice() {
         const rollButton = document.getElementById('throw-dice');
-        rollButton.addEventListener('click', callback);
+        rollButton.addEventListener('click', start);
     }
 
-    showNumberDice(num) {
+    showNumberDice() {
         const numDice = document.getElementById('num-dice');
-        numDice.innerHTML = num;
+        numDice.innerHTML = this._rollDice();
     }
     
 }
