@@ -1,10 +1,11 @@
 class Dice {
     constructor() {
-        this.diceResult = this.diceResult;
+        this.numFaces = 6;
+        this.diceResult = 0;
     }
 
     _rollDice() {
-        this.diceResult = Math.floor(Math.random() * 6) +1;
-        return this.diceResult;
-}
+        let result = Math.floor(Math.random() * this.numFaces) +1;
+        this.diceResult = result;
+    }
 }
