@@ -1,8 +1,8 @@
 class Street {
-    constructor(){
-        this.color
-        this.name
-        this.value
-        this.rent
+    constructor(color,){
+        this.color = color;
+        this.name = name;
+        this.value = value;
+        this.rent = rent;
     }
 }

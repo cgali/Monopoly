@@ -1,5 +1,5 @@
 
-// //testing code
+// // testing code
 
 // let numFaces = 6;
 // let diceResult = 0;
