@@ -1,1 +1,343 @@
 
+/*** GENERAL ***/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-image: url("https://www.stickpng.com/assets/images/5930082c3919fe0ee3614dab.png");
+	background-position: center;
+	background-repeat: repeat;
+    background-size: 80px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: black;
+    text-transform: uppercase;
+}
+
+/************************
+******* GAME PAGE *******
+*************************/
+
+/*** BUTTON DICE AND NUMBER ***/
+
+.dice-container {
+    background-color: red;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+#num-dice {
+    font-size: 60px;
+    margin-right: 10px;
+    color: white;
+    font-family: 'Bangers', cursive;
+}
+
+.button-dice {
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    border-radius: 35px;
+    width: 55px;
+    height: 55px;
+    font-size: 15px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+}
+
+/*** BOARDGAME ***/
+
+.boardgame {
+    display: grid;
+	grid-template-columns: 125px repeat(7, 80px) 125px;
+	grid-template-rows: 125px repeat(7, 80px) 125px;
+	grid-gap: 2px;
+	margin: 50px auto;
+	width: 830px;
+	height: 830px;
+	background: black;
+	border: 2px solid black;
+}
+
+/*** TITLE ***/
+
+.title {
+    font-family: 'Bangers', cursive;
+    font-size: 90px;
+    font-weight: 400;
+    letter-spacing: 14px;
+    color: red;
+    text-align: center;
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 30.2%;
+    line-height: 2.12;
+    padding-right: 69px;
+    padding-left: 68.5px;
+    background-image: url(https://p7.hiclipart.com/./414/831/671/rich-uncle-pennybags-monopoly-party-game-monopoly-streets-monopoly-man.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 30px;
+}
+
+/*** GENERAL ROWS ***/
+
+.row {
+	display: grid;
+	grid-gap: 2px;
+}
+
+/*** VERTICAL ROWS ***/
+
+.vertical-row {
+	grid-template-columns: 125px;
+	grid-template-rows: repeat(7, 80px);
+}
+
+.vertical-row .container {
+    top: 50%;
+    left: 50%;
+}
+
+.left-row {
+	grid-column: 1;
+	grid-row: 2 / 10;
+}
+
+.left-row .container {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.right-row {
+	grid-column: 9;
+	grid-row: 2 / 9;
+}
+
+.right-row .container {
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+
+/*** HORITZONTAL ROWS ***/
+
+.horizontal-row {
+	grid-template-columns: repeat(7, 80px);
+	grid-template-rows: 125px;
+}
+
+.bottom-row {
+	grid-column: 2 / 9;
+	grid-row: 9;
+}
+
+.top-row {
+	grid-column: 2 / 9;
+	grid-row: 1;
+}
+
+.top-row .container {
+    transform: rotate(180deg);
+}
+
+/*** SPACE AND CORNER BOXES ***/
+
+.space-property, .corner {
+	background: #fafaf8;
+	text-align: center;
+
+}
+.space-property .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transform-origin: center;
+    height: 125px;
+    width: 80px;
+}
+
+.space-property .container .name, .instructions{
+    padding-left: 15px;
+	padding-right: 15px;
+}
+
+.space-property .container .price{
+    font-size: 10px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.corner .container {
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.corner .name {
+    padding: 0;
+}
+
+/*** SPACE-PROPERTY BOX COLOR ***/
+
+.space-property .container .bar {
+    height: 25px;
+    border-bottom: 2px solid black;
+}
+
+.space-property .container .light-blue {
+    background-color: lightblue;
+}
+
+.space-property .container .dark-purple {
+    background-color: rgb(102, 5, 102);
+}
+
+.space-property .container .orange {
+    background-color: orange;
+}
+
+.space-property .container .purple {
+    background-color: rgb(165, 4, 165);
+}
+
+.space-property .container .red {
+    background-color: red;
+}
+
+.space-property .container .yellow {
+    background-color: yellow;
+}
+
+.space-property .container .green {
+    background-color: green;
+}
+
+.space-property .container .dark-blue {
+    background-color: darkblue;
+}
+
+/*** WIFI/START BOX ***/
+
+.start {
+	grid-column: 9;
+	grid-row: 9 / 10;
+    position: relative;
+}
+
+.start .container {
+    justify-content: flex-start;
+	transform: rotate(315deg);
+}
+
+.start .instructions {
+    padding: 0 30px;
+}
+
+.start .text {
+    font-size: 20px;
+    color: red;
+}
+
+/*** JAIL BOX ***/
+
+.jail {
+	grid-column: 1;
+	grid-row: 9 / 10;
+}
+
+.jail .container {
+    justify-content: flex-start;
+	transform: rotate(50deg);
+}
+
+.jail .text {
+    padding-top: 10px;
+    font-size: 20px;
+    color: blue;   
+}
+
+/*** FREE PARKING BOX ***/
+
+.free-parking {
+    grid-column: 1;
+	grid-row: 1;
+}
+
+.free-parking .container {
+    justify-content: center;
+    transform: rotate(135deg);
+}
+
+.free-parking .text {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+/*** GO TO JAIL BOX ***/
+
+.go-to-jail {
+	grid-column: 9;
+	grid-row: 1;
+}
+
+.go-to-jail .container {
+    justify-content: center;
+    transform: rotate(225deg);
+}
+
+.go-to-jail .text {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/************************
+****** START PAGE *******
+*************************/
+
+
+#start-page {
+    position: absolute;
+    background: white;
+    z-index: 1;
+    width: 144em;
+    height: 105em;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start-title {
+    font-size: 10em;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.15em;
+    color: red;
+    text-shadow: 5px 5px 5px black;
+}
+
+.img-monopoly {
+    height: 40em;
+}
+
+.button-start {
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    border-radius: 60px;
+    width: 100px;
+    height: 80px;
+    font-size: 25px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 30px 0px red;
+}
