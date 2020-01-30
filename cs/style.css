@@ -24,12 +24,18 @@ body {
 ******* GAME PAGE *******
 *************************/
 
-/*** BUTTON DICE AND NUMBER ***/
+/*** DICE AND CHRONO DISPLAY ***/
+
+.interface {
+    display: flex;
+}
+
+/*** DICE BUTTON AND NUMBER ***/
 
 .dice-container {
     background-color: red;
-    width: 300px;
-    height: 80px;
+    width: 29em;
+    height: 8em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,10 +45,17 @@ body {
     border-radius: 10px;
 }
 #num-dice {
-    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.6em;
     margin-right: 10px;
     color: white;
+    width: 1em;
+    height: 1em;
     font-family: 'Bangers', cursive;
+    border: 4px solid white;
+    border-radius: 8px;
 }
 
 .button-dice {
@@ -66,6 +79,55 @@ body {
     outline: 0;
 }
 
+/*** CHRONO BUTTONS AND NUMBERS ***/
+
+.chrono-interface {
+    background-color: black;
+    color: white;
+    font-size: 2.4em;
+    width: 8em;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 30px;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+.chrono-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    width: 2.3em;
+    height: 1.5em;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.2em;
+}
+
+#chrono-start-button, #chrono-stop-button {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    font-size: 0.5em;
+    text-align: center;
+    border-radius: 3px;
+    width: 4em;
+    height: 2.5em;
+}
+
+#chrono-start-button:focus, #chrono-stop-button:active {
+    box-shadow: 2px 2px 2px white;
+    transform: translateY(1px);
+  }
+
+  #chrono-start-button:focus, #chrono-stop-button:focus {
+    outline: 0;
+}
 /*** BOARDGAME ***/
 
 .boardgame {
@@ -244,11 +306,11 @@ body {
 
 .logo {
     margin-left: 1em;
-    width: 60px;
-    height: 60px;
+    width: 6em;
+    height: 7em;
 }
 
-/*** WIFI/START BOX ***/
+/*** WIFI/START CORNER BOX ***/
 
 .start {
 	grid-column: 9;
@@ -275,7 +337,7 @@ body {
     height: 50px;
 }
 
-/*** JAIL BOX ***/
+/*** JAIL CORNER BOX ***/
 
 .jail {
 	grid-column: 1;
@@ -298,7 +360,7 @@ body {
     height: 80px;
 }
 
-/*** FREE PARKING BOX ***/
+/*** FREE PARKING CORNER BOX ***/
 
 .free-parking {
     grid-column: 1;
@@ -320,7 +382,7 @@ body {
     height: 70px;
 }
 
-/*** GO TO JAIL BOX ***/
+/*** GO TO JAIL CORNER BOX ***/
 
 .go-to-jail {
 	grid-column: 9;
@@ -346,6 +408,7 @@ body {
 ****** START PAGE *******
 *************************/
 
+/*** CONTAINER ***/
 
 .start-container {
     position: absolute;
@@ -359,6 +422,8 @@ body {
     align-items: center;
 }
 
+/*** TITLE ***/
+
 .start-title {
     font-size: 10em;
     text-align: center;
@@ -368,9 +433,13 @@ body {
     text-shadow: 5px 5px 5px black;
 }
 
+/*** IMAGE ***/
+
 .img-monopoly {
     height: 40em;
 }
+
+/*** BUTTON ***/
 
 .button-start {
     border: 2px solid black;

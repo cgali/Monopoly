@@ -11,21 +11,37 @@
 </head>
 
 <body>
-<div id="start-page">
+<section id="start-page">
     <div class="start-container">
         <h1 class="start-title">MONOPOLY SOCIAL MEDIA</h1>
         <img class="img-monopoly" src="/img/man-of-monopoly.png" alt="man of monopoly">
         <button id="start" class="button-start">START</button>
     </div>    
-</div>
+</section>
 
 
 
-<div id="game-page"></div>
-    <div class="dice-container">
-        <span id="num-dice">0</span>
-        <button id="throw-dice" class="button-dice" value="Throw">Roll!</button>
-    </div>
+<section id="game-page">
+
+    <section class="interface">
+        <div class="dice-container">
+            <span id="num-dice">0</span>
+            <button id="throw-dice" class="button-dice" value="Throw">Roll!</button>
+        </div>
+
+        <div class="chrono-interface">
+            <div class="chrono-display">
+                <span id="min">5</span> : <span id="sec">00</span>
+            </div>
+
+            <div class="chrono-buttons">
+                <button id="chrono-start-button">START</button>
+                <button id="chrono-stop-button">STOP</button>
+            </div>
+        </div>
+    </section>
+
+    
 
     <!-- TITLE -->
     <div>
@@ -278,13 +294,14 @@
             </div>
         </div>
     </div>
-</div>
+</section>
     
         
 
     <script src="./js/dice.js"></script>
     <script src="./js/player.js"></script>
     <script src="./js/street.js"></script>
+    <script src="./js/chrono.js"></script>
     <script src="./js/game.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/test.js"></script>
