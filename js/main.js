@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         game.startChrono();
     })
 
+    const buttonStopCountdown = document.getElementById("chrono-stop-button");
+    buttonStopCountdown.addEventListener('click', ()=> {
+        game = new Game(showTimer);
+        game.stopChrono();
+    })
+
     function drawResult(result) {
         const numDice = document.getElementById('num-dice');
         numDice.innerText = result;

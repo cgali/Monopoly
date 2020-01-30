@@ -20,6 +20,7 @@ class Game{
     }
 
     stopChrono() {
-
+        const stopTime = this.chrono.stopCountdown();
+        this.showChrono(stopTime);
     }
 }
