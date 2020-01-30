@@ -1,5 +1,7 @@
 
-/*** GENERAL ***/
+/************************
+******** GENERAL ********
+*************************/
 
 * {
 	box-sizing: border-box;
@@ -53,6 +55,15 @@ body {
     font-size: 15px;
     font-family: 'Bangers', cursive;
     letter-spacing: 2px;
+}
+
+.button-dice:active {
+    box-shadow: 2px 4px 2px white;
+    transform: translateY(4px);
+  }
+
+.button-dice:focus {
+    outline: 0;
 }
 
 /*** BOARDGAME ***/
@@ -186,6 +197,10 @@ body {
     padding: 0;
 }
 
+.wordpress {
+    font-size: 9px;
+}
+
 /*** SPACE-PROPERTY BOX COLOR ***/
 
 .space-property .container .bar {
@@ -225,6 +240,14 @@ body {
     background-color: darkblue;
 }
 
+/*** MOBILES COMPANIES BOX IMAGES ***/
+
+.logo {
+    margin-left: 1em;
+    width: 60px;
+    height: 60px;
+}
+
 /*** WIFI/START BOX ***/
 
 .start {
@@ -247,6 +270,11 @@ body {
     color: red;
 }
 
+.img-wifi-logo {
+    width: 80px;
+    height: 50px;
+}
+
 /*** JAIL BOX ***/
 
 .jail {
@@ -263,6 +291,11 @@ body {
     padding-top: 10px;
     font-size: 20px;
     color: blue;   
+}
+
+.img-jail {
+    width: 80px;
+    height: 80px;
 }
 
 /*** FREE PARKING BOX ***/
@@ -282,6 +315,11 @@ body {
     padding-top: 10px;
 }
 
+.img-free-parking {
+    width: 80px;
+    height: 70px;
+}
+
 /*** GO TO JAIL BOX ***/
 
 .go-to-jail {
@@ -297,6 +335,11 @@ body {
 .go-to-jail .text {
     padding-top: 10px;
     font-size: 20px;
+}
+
+.img-go-to-prison {
+    width: 60px;
+    height: 60px;
 }
 
 /************************
@@ -341,3 +384,12 @@ body {
     letter-spacing: 2px;
     box-shadow: 0px 0px 30px 0px red;
 }
+
+.button-start:focus {
+    outline: 0;
+}
+
+.button-start:active {
+    box-shadow: 0px 0px 30px 0px rgb(190, 5, 5);
+    transform: translateY(4px);
+  }
