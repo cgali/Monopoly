@@ -11,13 +11,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     })
 
+    const buttonStart = document.getElementById('start');
+    buttonStart.addEventListener('click', ()=> {
+        const startPage = document.getElementById('start-page');
+        while (startPage.firstChild) {
+            startPage.removeChild(startPage.firstChild);
+          }
+    })
 
     function drawResult(result) {
         const numDice = document.getElementById('num-dice');
         numDice.innerText = result;
     }
-
-
 
 
 });

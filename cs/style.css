@@ -84,7 +84,7 @@ body {
     line-height: 2.12;
     padding-right: 69px;
     padding-left: 68.5px;
-    background-image: url(https://p7.hiclipart.com/./414/831/671/rich-uncle-pennybags-monopoly-party-game-monopoly-streets-monopoly-man.jpg);
+    background-image: url("https://lh3.googleusercontent.com/proxy/b-0QMtIA7KxNgZeDAMMVKNNtu_W3ajR6iztQ2oSfjgdVCvxhZKwIk0kn6W3vFhJrYyuBzOY2k7gLc4NfLMAH-xhYa7pRR4LCcp4sHRyG0Mgedlo4YCO9Uq0xwtANSip4FizjsETnzdp1KzADl1Gk1A");
     background-position: center;
     background-repeat: repeat;
     background-size: 30px;
@@ -304,7 +304,7 @@ body {
 *************************/
 
 
-#start-page {
+.start-container {
     position: absolute;
     background: white;
     z-index: 1;
