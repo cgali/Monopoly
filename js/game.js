@@ -1,26 +1,40 @@
 // controller model
 
 class Game{
-    constructor(drawResult, showTimer) {
+    constructor(drawDiceResult, drawTimer) {
         this.dice = new Dice();
-        this.draw = drawResult;
+        this.drawDiceResult = drawDiceResult;
         this.chrono = new Chrono();
-        this.showChrono = showTimer;
+        this.showChrono = drawTimer;
+                                        //game necesita una propiedad a la que llamar para pintar el tiempo
     }
 
-    startDice() {
+                                        // game necesita metodo para iniciar juego
+    startGame() {
+        this.chrono.start();
+    }
+
+    continueGame() {
+        this.chrono.continue();
+    }
+
+    pauseGame() {
+        this.chrono.pause();
+    }
+
+    resetGame() {
+        this.chrono.reset();
+    }
+
+    drawTimeChrono() {
+        const seconds = this.chrono.start(this.counterSec);
+        const minutes = this.chrono.start(this.counterMin);
+        this.drawTimer(this.seconds, this.minutes)
+    }
+//crear metodo para pintar el tiempo del crono
+
+    throwDice() {
         const result = this.dice.throw();
-        this.draw(result);
-    }
-
-    startChrono() {
-        const time = this.chrono.startCountdown();
-        this.showChrono(time);
-
-    }
-
-    stopChrono() {
-        const stopTime = this.chrono.stopCountdown();
-        this.showChrono(stopTime);
+        this.drawDiceResult(result);
     }
 }

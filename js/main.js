@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     const buttonDice = document.getElementById('throw-dice');
     buttonDice.addEventListener('click', ()=> {
-        game = new Game(drawResult);
-        game.startDice();
-
+        game.throwDice();
     })
 
     const buttonStart = document.getElementById('start');
@@ -17,30 +15,44 @@ document.addEventListener('DOMContentLoaded', (event) => {
         while (startPage.firstChild) {
             startPage.removeChild(startPage.firstChild);
           }
+          game = new Game(drawDiceResult, drawTimer);
+          game.startGame();
+          game.drawTimeChrono();
+          document.getElementById("chrono-continue-button").disabled = true;
+                                            // Game tiene que saber a quien llamar para pintar el tiempo
+          // Game tiene que arranca
     })
 
-    const buttonStartCountdown = document.getElementById("chrono-start-button");
-    buttonStartCountdown.addEventListener('click', ()=> {
-        game = new Game(showTimer);
-        game.startChrono();
+    const buttonContinueCountdown = document.getElementById("chrono-continue-button");
+    buttonContinueCountdown.addEventListener('click', ()=> {
+        game.continueGame();
     })
 
-    const buttonStopCountdown = document.getElementById("chrono-stop-button");
-    buttonStopCountdown.addEventListener('click', ()=> {
-        game = new Game(showTimer);
-        game.stopChrono();
+    const buttonPauseCountdown = document.getElementById("chrono-pause-button");
+    buttonPauseCountdown.addEventListener('click', ()=> {
+        game.pauseGame();
+        document.getElementById("chrono-continue-button").disabled = false;
     })
 
-    function drawResult(result) {
+    const buttonResetCountdown = document.getElementById("chrono-reset-button");
+    buttonResetCountdown.addEventListener('click', ()=> {
+        game.resetGame();
+        document.getElementById("chrono-continue-button").disabled = false;
+    })
+
+    function drawDiceResult(result) {
         const numDice = document.getElementById('num-dice');
         numDice.innerText = result;
     }
 
-    function showTimer(time) {
-        const min = document.getElementById("min");
-        const sec = document.getElementById("sec");
-        min.innerText = time;
-        sec.innerText = time;
+    function drawTimer(seconds, minutes) {
+        setInterval(() => {
+            const sec = document.getElementById("sec");
+            const min = document.getElementById("min");
+            sec.innerText = seconds;
+            min.innerText = minutes;
+        }, 1000);
+        
     }
 
 

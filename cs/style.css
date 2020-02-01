@@ -85,7 +85,7 @@ body {
     background-color: black;
     color: white;
     font-size: 2.4em;
-    width: 8em;
+    width: 9em;
     height: 3.5em;
     display: flex;
     align-items: center;
@@ -109,25 +109,41 @@ body {
     letter-spacing: 0.2em;
 }
 
-#chrono-start-button, #chrono-stop-button {
+#chrono-pause-button, #chrono-reset-button {
     background-color: red;
     color: white;
     border: 1px solid red;
     font-size: 0.5em;
+    letter-spacing: 0.1em;
     text-align: center;
+    font-family: 'Bangers', cursive;
     border-radius: 3px;
     width: 4em;
     height: 2.5em;
 }
 
-#chrono-start-button:focus, #chrono-stop-button:active {
+#chrono-continue-button {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    font-size: 0.5em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    border-radius: 3px;
+    width: 7em;
+    height: 2.5em;
+}
+
+#chrono-continue-button:active, #chrono-pause-button:active, #chrono-reset-button:active {
     box-shadow: 2px 2px 2px white;
     transform: translateY(1px);
   }
 
-  #chrono-start-button:focus, #chrono-stop-button:focus {
+#chrono-continue-button:focus, #chrono-pause-button:focus, #chrono-reset-button:focus {
     outline: 0;
 }
+
 /*** BOARDGAME ***/
 
 .boardgame {
@@ -135,9 +151,9 @@ body {
 	grid-template-columns: 125px repeat(7, 80px) 125px;
 	grid-template-rows: 125px repeat(7, 80px) 125px;
 	grid-gap: 2px;
-	margin: 50px auto;
-	width: 830px;
-	height: 830px;
+	margin: 3.5% auto;
+	width: 57.6%;
+	height: 57.6%;
 	background: black;
 	border: 2px solid black;
 }
@@ -146,21 +162,20 @@ body {
 
 .title {
     font-family: 'Bangers', cursive;
-    font-size: 90px;
+    font-size: 9em;
     font-weight: 400;
-    letter-spacing: 14px;
+    letter-spacing: 0.1555em;
     color: red;
     text-align: center;
     position: absolute;
-    margin-top: 180px;
+    margin-top: 12.5%;
     margin-left: 30.2%;
-    line-height: 2.12;
-    padding-right: 69px;
-    padding-left: 68.5px;
+    line-height: 2.12em;
+    padding-right: 4.8%;
+    padding-left: 4.75%;
     background-image: url("https://lh3.googleusercontent.com/proxy/b-0QMtIA7KxNgZeDAMMVKNNtu_W3ajR6iztQ2oSfjgdVCvxhZKwIk0kn6W3vFhJrYyuBzOY2k7gLc4NfLMAH-xhYa7pRR4LCcp4sHRyG0Mgedlo4YCO9Uq0xwtANSip4FizjsETnzdp1KzADl1Gk1A");
     background-position: center;
-    background-repeat: repeat;
-    background-size: 30px;
+    background-size: 6em;
 }
 
 /*** GENERAL ROWS ***/
