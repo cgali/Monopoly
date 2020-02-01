@@ -1,7 +1,7 @@
 class Player {
-    constructor() {
+    constructor(position) {
         this.name = player1;
-        this.avatar = avatar;
+        this.position = position;
         this.money = 1500;
     }
 
