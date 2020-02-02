@@ -14,18 +14,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const startPage = document.getElementById('start-page');
         while (startPage.firstChild) {
             startPage.removeChild(startPage.firstChild);
-          }
-          game = new Game(drawDiceResult, drawTimer);
-          game.startGame();
-          game.drawTimeChrono();
-          document.getElementById("chrono-continue-button").disabled = true;
-                                            // Game tiene que saber a quien llamar para pintar el tiempo
-          // Game tiene que arranca
+        }
+        game = new Game(drawDiceResult, drawTimer);
+        game.startGame();
+        document.getElementById("chrono-continue-button").disabled = true;
     })
 
     const buttonContinueCountdown = document.getElementById("chrono-continue-button");
     buttonContinueCountdown.addEventListener('click', ()=> {
         game.continueGame();
+        document.getElementById("chrono-continue-button").disabled = true;
     })
 
     const buttonPauseCountdown = document.getElementById("chrono-pause-button");
@@ -46,13 +44,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function drawTimer(seconds, minutes) {
-        setInterval(() => {
-            const sec = document.getElementById("sec");
-            const min = document.getElementById("min");
-            sec.innerText = seconds;
-            min.innerText = minutes;
-        }, 1000);
-        
+        //console.log(seconds, minutes);
+        document.querySelector('.chrono-display').innerHTML = `<span class='counter'>${minutes} : ${seconds}</span>`;
     }
 
 

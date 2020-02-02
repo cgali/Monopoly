@@ -5,13 +5,13 @@ class Game{
         this.dice = new Dice();
         this.drawDice = drawDiceResult;
         this.chrono = new Chrono();
-        this.showChrono = drawTimer;
-                                        //game necesita una propiedad a la que llamar para pintar el tiempo
+        this.drawTimer = drawTimer;
+        this.timerInterval = undefined;
     }
 
-                                        // game necesita metodo para iniciar juego
     startGame() {
         this.chrono.start();
+        this.drawTimeChrono();
     }
 
     continueGame() {
@@ -27,9 +27,9 @@ class Game{
     }
 
     drawTimeChrono() {
-        const seconds = this.chrono.start(this.counterSec);
-        const minutes = this.chrono.start(this.counterMin);
-        this.showChrono(seconds, minutes)
+        this.timerInterval = setInterval(() =>{
+            this.drawTimer(this.chrono.counterSec, this.chrono.counterMin);
+        }, 1000);
     }
 //crear metodo para pintar el tiempo del crono
 
