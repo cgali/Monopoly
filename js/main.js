@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const buttonStart = document.getElementById('start');
     buttonStart.addEventListener('click', ()=> {
-        const startPage = document.getElementById('start-page');
-        while (startPage.firstChild) {
-            startPage.removeChild(startPage.firstChild);
-        }
         game = new Game(drawDiceResult, drawTimer);
         game.startGame();
         document.getElementById("chrono-continue-button").disabled = true;
@@ -38,13 +34,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("chrono-continue-button").disabled = false;
     })
 
-    const buttonRestartTimeout = document.getElementsByClassName('timeout-restart-button');
+    const buttonRestartTimeout = document.querySelector('.timeout-restart-button');
     buttonRestartTimeout.addEventListener('click', ()=> {
-        document.querySelector('.start-page').innerHTML = `<div class="start-container">
-        <h1 class="start-title">MONOPOLY SOCIAL MEDIA</h1>
-        <img class="img-monopoly" src="/img/man-of-monopoly.png" alt="man of monopoly">
-        <button id="start" class="start-button">START</button>
-    </div>`
+        document.getElementById("start-page").style.display = "block";
     })
 
 
