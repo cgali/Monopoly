@@ -1,6 +1,6 @@
 class Chrono {
     constructor() {
-        this.counterSec = 5;
+        this.counterSec = 11;
         this.counterMin = 0;
         this.intervalID = undefined;
     }
