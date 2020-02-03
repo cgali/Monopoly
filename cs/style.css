@@ -355,6 +355,13 @@ body {
     height: 7em;
 }
 
+.mastercard {
+    height: 5em;
+}
+
+.mastercard-tax > .container > .name {
+    padding-left: 0.6em;
+}
 /*** WIFI/START CORNER BOX ***/
 
 .start {

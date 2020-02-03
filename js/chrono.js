@@ -21,9 +21,9 @@ class Chrono {
                 document.getElementById("chrono-pause-button").disabled = true;
                 document.getElementById("chrono-reset-button").disabled = true;
                 document.getElementById("timeout-page").style.display = "block";
-            } else if (this.counterSec === 0) {
+            } else if (this.counterSec === -1) {
                 this.counterMin --;
-                this.counterSec = 60;
+                this.counterSec = 59;
                 
             } else if (this.counterSec < 10) {
                 this.counterSec = "0" + this.counterSec;
@@ -57,9 +57,9 @@ class Chrono {
                 document.getElementById("chrono-pause-button").disabled = true;
                 document.getElementById("chrono-reset-button").disabled = true;
                 document.getElementById("timeout-page").style.display = "block";
-            }  else if (this.counterSec === 0) {
+            }  else if (this.counterSec === -1) {
                 this.counterMin --;
-                this.counterSec = 60;
+                this.counterSec = 59;
                 
             } else if (this.counterSec < 10) {
                 this.counterSec = "0" + this.counterSec;
