@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const buttonRestartTimeout = document.querySelector('.timeout-restart-button');
     buttonRestartTimeout.addEventListener('click', ()=> {
-        document.getElementById("start-page").style.display = "block";
-    })
+        game.restartGame();
+})
 
 
     function drawDiceResult(result) {
@@ -49,6 +49,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
         //console.log(seconds, minutes);
         document.querySelector('.chrono-display').innerHTML = `<span class='counter'>${minutes} : ${seconds}</span>`;
     }
-
-
 });

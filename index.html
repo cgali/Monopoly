@@ -12,313 +12,309 @@
 </head>
 
 <body>
+    <!-- START PAGE -->
+    <section id="start-page">
+        <div class="start-container">
+            <h1 class="start-title">MONOPOLY SOCIAL MEDIA</h1>
+            <img class="img-monopoly" src="/img/man-of-monopoly.png" alt="man of monopoly">
+            <button id="start" class="start-button">START</button>
+        </div>    
+    </section>
 
-
-<!-- START PAGE -->
-<section id="start-page">
-    <div class="start-container">
-        <h1 class="start-title">MONOPOLY SOCIAL MEDIA</h1>
-        <img class="img-monopoly" src="/img/man-of-monopoly.png" alt="man of monopoly">
-        <button id="start" class="start-button">START</button>
-    </div>    
-</section>
-
-<!-- TIMEOUT PAGE -->
-<section id="timeout-page">
-    <div class="timeout-container">
-        <h2 class="timeout-title">TIMEOUT!</h2>
-        <img class="img-timeout" src="/img/timeout.png" alt="Timeout">
-        <button class="timeout-restart-button">RESTART</button>
-    </div>
-</section>
-
-<!-- GAME PAGE (PRINCIPAL CONTENT) -->
-<section id="game-page">
-
-    <!-- DICE -->
-    <section class="interface">
-        <div class="dice-container">
-            <span id="num-dice">0</span>
-            <button id="throw-dice" class="button-dice" value="Throw">Roll!</button>
-        </div>
-
-        <!-- CHRONO -->
-        <div class="chrono-interface">
-            <div class="chrono-display">
-                <span id="min">5</span> : <span id="sec">00</span>
-            </div>
-
-            <div class="chrono-buttons">
-                <button id="chrono-continue-button">CONTINUE</button>
-                <button id="chrono-pause-button">PAUSE</button>
-                <button id="chrono-reset-button">RESET</button>
-            </div>
+    <!-- TIMEOUT PAGE -->
+    <section id="timeout-page">
+        <div class="timeout-container">
+            <h2 class="timeout-title">TIMEOUT!</h2>
+            <img class="img-timeout" src="/img/timeout.png" alt="Timeout">
+            <button class="timeout-restart-button">RESTART</button>
         </div>
     </section>
 
-    
+    <!-- GAME PAGE (PRINCIPAL CONTENT) -->
+    <section id="game-page">
 
-    <!-- TITLE -->
-    <div>
-        <h1 class="title">MONOPOLY </br> SOCIAL </br> MEDIA</h1>
-    </div>
+        <!-- DICE -->
+        <section class="interface">
+            <div class="dice-container">
+                <span id="num-dice">0</span>
+                <button id="throw-dice" class="button-dice" value="Throw">Roll!</button>
+            </div>
 
-    <!-- BOARDGAME -->
-    <div class="boardgame"> 
+            <!-- CHRONO -->
+            <div class="chrono-interface">
+                <div class="chrono-display">
+                    <span id="min">5</span> : <span id="sec">00</span>
+                </div>
 
-        <!-- PLAYERS -->
-        <img class="logo-ironhack blue" src="/img/logo-ironhack-blue.png" alt="Logo ironhack blue" data-position="0">
-        <img class="logo-ironhack black" src="/img/ironhack-logo-negro.jpg" alt="Logo ironhack black" data-position="0">
-        <img class="logo-ironhack white" src="/img/logo-ironhack-white.png" alt="Logo ironhack white" data-position="0">
+                <div class="chrono-buttons">
+                    <button id="chrono-continue-button">CONTINUE</button>
+                    <button id="chrono-pause-button">PAUSE</button>
+                    <button id="chrono-reset-button">RESET</button>
+                </div>
+            </div>
+        </section>
 
-        <!-- START CORNER -->
-        <div class="corner start" data-position="0">
-            <div class="container">
-                <div class="instructions">Collect 200€ as you pass</div>
-                <div class="text">Wifi/start</div>
-                <img class="img-wifi-logo" src="/img/wifi.png" alt="Wifi logo">
-            </div>
-        </div>
-
-        <!-- ROW HORIZONTAL LEFT -->
-        <div class="row horizontal-row bottom-row">
-            <div class="space-property" data-position="7">
-                <div class="container">
-                    <div class="bar light-blue"></div>
-                    <div class="name">Digg</div>
-                    <div class="price">PRICE 120€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="6">
-                <div class="container">
-                    <div class="bar light-blue"></div>
-                    <div class="name">Stumble Upon</div>
-                    <div class="price">Price 100€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="5">
-                <div class="container">
-                    <div class="bar light-blue"></div>
-                    <div class="name">Reddit</div>
-                    <div class="price">Price 100€</div>
-                </div>
-            </div>
-            <div class="space-property mobile-company" data-position="4">
-                <div class="container">
-                    <div class="name">SAMSUNG</div>
-                    <img class="logo samsung" src="img/samsung.png" alt="samsung">
-                    <div class="price">Price 200€</div>
-                </div>
-            </div>
-            <div class="space-property zoompass-tax" data-position="3">
-                <div class="container">
-                    <div class="name">Zoom Pass</div>
-                    <img class="logo zoompass" src="img/zoompass.jpg" alt="zoompass">
-                    <div class="price">Pay 200€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="2">
-                <div class="container">
-                    <div class="bar dark-purple"></div>
-                    <div class="name">Buzz Feed</div>
-                    <div class="price">Price 60€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="1">
-                <div class="container">
-                    <div class="bar dark-purple"></div>
-                    <div class="name">Linkedin</div>
-                    <div class="price">Price 60€</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CORNER JAIl -->
-        <div class="corner jail" data-position="8">
-            <div class="container">
-                <div class="text">In Jail</div>
-                <img class="img-jail" src="/img/jail.webp" alt="Jail">
-            </div>
-        </div>
-
-        <!-- LEFT ROW VERTICAL  -->
-        <div class="row vertical-row left-row">
-            <div class="space-property" data-position="15">
-                <div class="container">
-                    <div class="bar orange"></div>
-                    <div class="name">Blogger</div>
-                    <div class="price">Price 200€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="14">
-                <div class="container">
-                    <div class="bar orange"></div>
-                    <div class="name wordpress">WordPress</div>
-                    <div class="price">Price 180€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="13">
-                <div class="container">
-                    <div class="bar orange"></div>
-                    <div class="name">TUMBLR</div>
-                    <div class="price">Price 180€</div>
-                </div>
-            </div>
-            <div class="space-property mobile-company" data-position="12">
-                <div class="container">
-                    <div class="name">HUAWEI</div>
-                    <img class="logo huawei" src="img/huawei.png" alt="huawei">
-                    <div class="price">Price 200€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="11">
-                <div class="container">
-                    <div class="bar purple"></div>
-                    <div class="name">Google</div>
-                    <div class="price">Price 160€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="10">
-                <div class="container">
-                    <div class="bar purple"></div>
-                    <div class="name">Bing</div>
-                    <div class="price">Price 140€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="9">
-                <div class="container">
-                    <div class="bar purple"></div>
-                    <div class="name">Yahoo!</div>
-                    <div class="price">Price 140€</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CORNER FREE PARKING -->
-        <div class="corner free-parking" data-position="15">
-            <div class="container">
-                <div class="text">Free Parking</div>
-                <img class="img-free-parking" src="/img/free-parking.png" alt="Free parking">
-            </div>
-        </div>
-
-        <!-- TOP ROW HORIZONTAL -->
-        <div class="row horizontal-row top-row">
-            <div class="space-property">
-                <div class="container" data-position="22">
-                    <div class="bar red"></div>
-                    <div class="name">Image Shack</div>
-                    <div class="price">Price 220€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="21">
-                <div class="container">
-                    <div class="bar red"></div>
-                    <div class="name">Photo Bucket</div>
-                    <div class="price">Price 220€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="20">
-                <div class="container">
-                    <div class="bar red"></div>
-                    <div class="name">Flickr </div>
-                    <div class="price">Price 200€</div>
-                </div>
-            </div>
-            <div class="space-property mobile-company" data-position="19">
-                <div class="container">
-                    <div class="name">XIAOMI</div>
-                    <img class="logo xiaomi" src="/img/xiaomi.png" alt="xiaomi">
-                    <div class="price">Price 200€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="18">
-                <div class="container">
-                    <div class="bar yellow"></div>
-                    <div class="name"> DeHood</div>
-                    <div class="price">Price 260€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="17">
-                <div class="container">
-                    <div class="bar yellow"></div>
-                    <div class="name"> GoWalfa</div>
-                    <div class="price">Price 260€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="16">
-                <div class="container">
-                    <div class="bar yellow"></div>
-                    <div class="name">Four Square</div>
-                    <div class="price">Price 280€</div>
-                </div>
-            </div>
-        </div>
-        <!-- CORNER GO TO JAIL -->
-        <div class="corner go-to-jail" data-position="23">
-            <div class="container">
-                <div class="text">Go to</br> Jail</div>
-                <img class="img-go-to-prison" src="img/go-to-prison.png" alt="Go to prison">
-            </div>
-        </div>
-
-        <!-- RIGHT ROW VERTICAL -->
-        <div class="row vertical-row right-row">
-            <div class="space-property" data-position="30">
-                <div class="container">
-                    <div class="bar green"></div>
-                    <div class="name">METACAFE</div>
-                    <div class="price">Price 300€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="29">
-                <div class="container">
-                    <div class="bar green"></div>
-                    <div class="name">Vimeo</div>
-                    <div class="price">Price 300€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="28">
-                <div class="container">
-                    <div class="bar green"></div>
-                    <div class="name">Youtube</div>
-                    <div class="price">Price 320€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="27">
-                <div class="container">
-                    <div class="name">APPLE</div>
-                    <img class="logo apple" src="img/apple.webp" alt="apple">
-                    <div class="price">Price 200€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="26">
-                <div class="container">
-                    <div class="bar dark-blue"></div>
-                    <div class="name">Twitter</div>
-                    <div class="price">Price 350€</div>
-                </div>
-            </div>
-            <div class="space-property paypal-tax" data-position="25">
-                <div class="container">
-                    <div class="name">PayPal</div>
-                    <img class="logo paypal" src="/img/paypal.png" alt="PayPal">
-                    <div class="instructions">Pay 75.00€</div>
-                </div>
-            </div>
-            <div class="space-property" data-position="24">
-                <div class="container">
-                    <div class="bar dark-blue"></div>
-                    <div class="name">Facebook</div>
-                    <div class="price">Price 400€</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    
         
 
+        <!-- TITLE -->
+        <div>
+            <h1 class="title">MONOPOLY </br> SOCIAL </br> MEDIA</h1>
+        </div>
+
+        <!-- BOARDGAME -->
+        <div class="boardgame"> 
+
+            <!-- PLAYERS -->
+            <img class="logo-ironhack blue" src="/img/logo-ironhack-blue.png" alt="Logo ironhack blue" data-position="0">
+            <img class="logo-ironhack black" src="/img/ironhack-logo-negro.jpg" alt="Logo ironhack black" data-position="0">
+            <img class="logo-ironhack white" src="/img/logo-ironhack-white.png" alt="Logo ironhack white" data-position="0">
+
+            <!-- START CORNER -->
+            <div class="corner start" data-position="0">
+                <div class="container">
+                    <div class="instructions">Collect 200€ as you pass</div>
+                    <div class="text">Wifi/start</div>
+                    <img class="img-wifi-logo" src="/img/wifi.png" alt="Wifi logo">
+                </div>
+            </div>
+
+            <!-- ROW HORIZONTAL LEFT -->
+            <div class="row horizontal-row bottom-row">
+                <div class="space-property" data-position="7">
+                    <div class="container">
+                        <div class="bar light-blue"></div>
+                        <div class="name">Digg</div>
+                        <div class="price">PRICE 120€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="6">
+                    <div class="container">
+                        <div class="bar light-blue"></div>
+                        <div class="name">Stumble Upon</div>
+                        <div class="price">Price 100€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="5">
+                    <div class="container">
+                        <div class="bar light-blue"></div>
+                        <div class="name">Reddit</div>
+                        <div class="price">Price 100€</div>
+                    </div>
+                </div>
+                <div class="space-property mobile-company" data-position="4">
+                    <div class="container">
+                        <div class="name">SAMSUNG</div>
+                        <img class="logo samsung" src="img/samsung.png" alt="samsung">
+                        <div class="price">Price 200€</div>
+                    </div>
+                </div>
+                <div class="space-property zoompass-tax" data-position="3">
+                    <div class="container">
+                        <div class="name">Zoom Pass</div>
+                        <img class="logo zoompass" src="img/zoompass.jpg" alt="zoompass">
+                        <div class="price">Pay 200€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="2">
+                    <div class="container">
+                        <div class="bar dark-purple"></div>
+                        <div class="name">Buzz Feed</div>
+                        <div class="price">Price 60€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="1">
+                    <div class="container">
+                        <div class="bar dark-purple"></div>
+                        <div class="name">Linkedin</div>
+                        <div class="price">Price 60€</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORNER JAIl -->
+            <div class="corner jail" data-position="8">
+                <div class="container">
+                    <div class="text">In Jail</div>
+                    <img class="img-jail" src="/img/jail.webp" alt="Jail">
+                </div>
+            </div>
+
+            <!-- LEFT ROW VERTICAL  -->
+            <div class="row vertical-row left-row">
+                <div class="space-property" data-position="15">
+                    <div class="container">
+                        <div class="bar orange"></div>
+                        <div class="name">Blogger</div>
+                        <div class="price">Price 200€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="14">
+                    <div class="container">
+                        <div class="bar orange"></div>
+                        <div class="name wordpress">WordPress</div>
+                        <div class="price">Price 180€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="13">
+                    <div class="container">
+                        <div class="bar orange"></div>
+                        <div class="name">TUMBLR</div>
+                        <div class="price">Price 180€</div>
+                    </div>
+                </div>
+                <div class="space-property mobile-company" data-position="12">
+                    <div class="container">
+                        <div class="name">HUAWEI</div>
+                        <img class="logo huawei" src="img/huawei.png" alt="huawei">
+                        <div class="price">Price 200€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="11">
+                    <div class="container">
+                        <div class="bar purple"></div>
+                        <div class="name">Google</div>
+                        <div class="price">Price 160€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="10">
+                    <div class="container">
+                        <div class="bar purple"></div>
+                        <div class="name">Bing</div>
+                        <div class="price">Price 140€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="9">
+                    <div class="container">
+                        <div class="bar purple"></div>
+                        <div class="name">Yahoo!</div>
+                        <div class="price">Price 140€</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORNER FREE PARKING -->
+            <div class="corner free-parking" data-position="15">
+                <div class="container">
+                    <div class="text">Free Parking</div>
+                    <img class="img-free-parking" src="/img/free-parking.png" alt="Free parking">
+                </div>
+            </div>
+
+            <!-- TOP ROW HORIZONTAL -->
+            <div class="row horizontal-row top-row">
+                <div class="space-property">
+                    <div class="container" data-position="22">
+                        <div class="bar red"></div>
+                        <div class="name">Image Shack</div>
+                        <div class="price">Price 220€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="21">
+                    <div class="container">
+                        <div class="bar red"></div>
+                        <div class="name">Photo Bucket</div>
+                        <div class="price">Price 220€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="20">
+                    <div class="container">
+                        <div class="bar red"></div>
+                        <div class="name">Flickr </div>
+                        <div class="price">Price 200€</div>
+                    </div>
+                </div>
+                <div class="space-property mobile-company" data-position="19">
+                    <div class="container">
+                        <div class="name">XIAOMI</div>
+                        <img class="logo xiaomi" src="/img/xiaomi.png" alt="xiaomi">
+                        <div class="price">Price 200€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="18">
+                    <div class="container">
+                        <div class="bar yellow"></div>
+                        <div class="name"> DeHood</div>
+                        <div class="price">Price 260€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="17">
+                    <div class="container">
+                        <div class="bar yellow"></div>
+                        <div class="name"> GoWalfa</div>
+                        <div class="price">Price 260€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="16">
+                    <div class="container">
+                        <div class="bar yellow"></div>
+                        <div class="name">Four Square</div>
+                        <div class="price">Price 280€</div>
+                    </div>
+                </div>
+            </div>
+            <!-- CORNER GO TO JAIL -->
+            <div class="corner go-to-jail" data-position="23">
+                <div class="container">
+                    <div class="text">Go to</br> Jail</div>
+                    <img class="img-go-to-prison" src="img/go-to-prison.png" alt="Go to prison">
+                </div>
+            </div>
+
+            <!-- RIGHT ROW VERTICAL -->
+            <div class="row vertical-row right-row">
+                <div class="space-property" data-position="30">
+                    <div class="container">
+                        <div class="bar green"></div>
+                        <div class="name">METACAFE</div>
+                        <div class="price">Price 300€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="29">
+                    <div class="container">
+                        <div class="bar green"></div>
+                        <div class="name">Vimeo</div>
+                        <div class="price">Price 300€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="28">
+                    <div class="container">
+                        <div class="bar green"></div>
+                        <div class="name">Youtube</div>
+                        <div class="price">Price 320€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="27">
+                    <div class="container">
+                        <div class="name">APPLE</div>
+                        <img class="logo apple" src="img/apple.webp" alt="apple">
+                        <div class="price">Price 200€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="26">
+                    <div class="container">
+                        <div class="bar dark-blue"></div>
+                        <div class="name">Twitter</div>
+                        <div class="price">Price 350€</div>
+                    </div>
+                </div>
+                <div class="space-property paypal-tax" data-position="25">
+                    <div class="container">
+                        <div class="name">PayPal</div>
+                        <img class="logo paypal" src="/img/paypal.png" alt="PayPal">
+                        <div class="instructions">Pay 75.00€</div>
+                    </div>
+                </div>
+                <div class="space-property" data-position="24">
+                    <div class="container">
+                        <div class="bar dark-blue"></div>
+                        <div class="name">Facebook</div>
+                        <div class="price">Price 400€</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <script src="./js/dice.js"></script>
     <script src="./js/player.js"></script>
     <script src="./js/street.js"></script>
@@ -327,4 +323,5 @@
     <script src="./js/main.js"></script>
     <script src="./js/test.js"></script>
 </body>
+
 </html>

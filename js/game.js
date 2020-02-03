@@ -26,6 +26,12 @@ class Game{
         this.chrono.reset();
     }
 
+    restartGame() {
+        this.chrono.restart();
+        clearInterval(this.timerInterval);
+        this.timerInterval = undefined;
+    }
+
     drawTimeChrono() {
         this.timerInterval = setInterval(() =>{
             this.drawTimer(this.chrono.counterSec, this.chrono.counterMin);
