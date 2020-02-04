@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         game.restartGame();
 })
 
-
     function drawDiceResult(result) {
         const numDice = document.getElementById('num-dice');
         numDice.innerText = result;

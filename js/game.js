@@ -7,6 +7,8 @@ class Game{
         this.chrono = new Chrono();
         this.drawTimer = drawTimer;
         this.timerInterval = undefined;
+        this.currentDice = 0;
+        //this.currentPosition = position;
     }
 
     startGame() {
@@ -37,10 +39,24 @@ class Game{
             this.drawTimer(this.chrono.counterSec, this.chrono.counterMin);
         }, 1000);
     }
-//crear metodo para pintar el tiempo del crono
+
+    movePlayer() {
+        const player = document.createElement('div');
+        const playerClass = document.querySelector('div.player-position')
+        const container = document.querySelector('.container')
+        if (document.querySelector('.player-position')) {
+            container.removeChild(playerClass);
+        }
+        else {
+            player.classList.add('player-position');
+            document.querySelector(`div[data-position='${this.currentDice}'] div.container`).appendChild(player);
+        }
+        
+    }
 
     throwDice() {
-        const result = this.dice.throw();
-        this.drawDice(result);
+        this.currentDice = this.dice.throw();
+        this.drawDice(this.currentDice);
+        this.movePlayer();
     }
 }

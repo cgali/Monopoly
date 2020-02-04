@@ -6,7 +6,6 @@ class Chrono {
     }
 
     start() {
-        // controlar si ya hay uno en marcha
         if  (this.intervalID){
             clearInterval(this.intervalID)
         }
@@ -36,15 +35,16 @@ class Chrono {
         clearInterval(this.intervalID);
         this.counterMin = 5;
         this.counterSec = "0" + 0;
+        document.getElementById("throw-dice").disabled = true;
     }
 
     pause() {
         clearInterval(this.intervalID);
         this.intervalID = undefined;
-
+        document.getElementById("throw-dice").disabled = true;
     }
 
-    continue() {
+    continue() {document.getElementById("throw-dice").disabled = false;
         this.intervalID = setInterval(() => {
             this.counterSec --;
             if (this.counterMin === 5) {
