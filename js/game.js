@@ -41,16 +41,15 @@ class Game{
     }
 
     movePlayer() {
-        const player = document.createElement('div');
-        const playerClass = document.querySelector('div.player-position')
-        const container = document.querySelector('.container')
-        if (document.querySelector('.player-position')) {
-            container.removeChild(playerClass);
-        }
-        else {
-            player.classList.add('player-position');
-            document.querySelector(`div[data-position='${this.currentDice}'] div.container`).appendChild(player);
-        }
+        const player = document.createElement('span');
+        const playerClass = document.querySelector('span.player-position');
+        const container = document.querySelector('.container');
+        console.log(container);
+        console.log(playerClass);
+        container.removeChild(playerClass);
+        player.classList.add('player-position');
+        document.querySelector(`div[data-position='${this.currentDice}'] div.container`).appendChild(player);
+        
         
     }
 

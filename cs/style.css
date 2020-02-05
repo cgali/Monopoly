@@ -165,28 +165,22 @@ body {
 /*** PLAYERS ***/
 
 .logo-ironhack {
-    width: 4em;
+    width: 10em;
     z-index: 1;
 }
 
-.blue {
-    grid-column: 9;
-    grid-row: 9 / 10;
+.player-position {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 38px;
+    height: 38px;
+    background-image: url(../img/logo-ironhack-blue.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-
-.black {
-    grid-column: 9;
-    grid-row: 9 / 10;
-    display: none;
-}
-
-.white {
-    grid-column: 9;
-    grid-row: 9 / 10;
-    display: none;
-}
-
-
 
 /*** TITLE ***/
 
@@ -266,18 +260,7 @@ body {
     transform: rotate(180deg);
 }
 
-.player-position {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 38px;
-    height: 38px;
-    background-image: url(../img/logo-ironhack-blue.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+
 
 /*** SPACE AND CORNER BOXES ***/
 
