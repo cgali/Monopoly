@@ -46,7 +46,7 @@ class Game{
         const container = document.querySelector('.container-player-position');
         console.log(container);
         console.log(playerClass);
-        container.removeChild(playerClass);
+        playerClass.remove();
         player.classList.add('player-position');
         document.querySelector(`div[data-position='${this.currentDice}'] div.container div.container-player-position`).appendChild(player);
         
