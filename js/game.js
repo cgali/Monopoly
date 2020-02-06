@@ -43,13 +43,12 @@ class Game{
     movePlayer() {
         const player = document.createElement('span');
         const playerClass = document.querySelector('span.player-position');
-        const container = document.querySelector('.container');
+        const container = document.querySelector('.container-player-position');
         console.log(container);
         console.log(playerClass);
         container.removeChild(playerClass);
         player.classList.add('player-position');
-        document.querySelector(`div[data-position='${this.currentDice}'] div.container`).appendChild(player);
-        
+        document.querySelector(`div[data-position='${this.currentDice}'] div.container div.container-player-position`).appendChild(player);
         
     }
 
