@@ -4,6 +4,8 @@ let game;
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM Content loaded');
     
+    /*** BUTTONS FUNCTIONS ***/
+
     const buttonDice = document.getElementById('throw-dice');
     buttonDice.addEventListener('click', ()=> {
         game.throwDice();
@@ -37,7 +39,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const buttonRestartTimeout = document.querySelector('.timeout-restart-button');
     buttonRestartTimeout.addEventListener('click', ()=> {
         game.restartGame();
-})
+    })
+
+    /***  DRAW FUNCTIONS ***/
 
     function drawDiceResult(result) {
         const numDice = document.getElementById('num-dice');

@@ -8,8 +8,10 @@ class Game{
         this.drawTimer = drawTimer;
         this.timerInterval = undefined;
         this.currentDice = 0;
-        //this.currentPosition = position;
+        this.player = new Player();
     }
+
+    /*** BUTTONS ***/
 
     startGame() {
         this.chrono.start();
@@ -26,13 +28,23 @@ class Game{
 
     resetGame() {
         this.chrono.reset();
-    }
+        this.player.position = 1;
+        this.currentDice = 0;
+        this.playerPosition();
+        this.movePlayer();
+        }
 
     restartGame() {
         this.chrono.restart();
         clearInterval(this.timerInterval);
         this.timerInterval = undefined;
+        this.player.position = 1;
+        this.currentDice = 0;
+        this.playerPosition();
+        this.movePlayer();
     }
+
+    /*** DRAW TIME ***/
 
     drawTimeChrono() {
         this.timerInterval = setInterval(() =>{
@@ -40,21 +52,34 @@ class Game{
         }, 1000);
     }
 
+    /*** MOVE PLAYER ***/
+
+    playerPosition() {
+        if (this.player.position > 32) {
+            this.player.position = this.player.position % 32;
+        } else {
+            this.player.position += this.currentDice;
+        }
+        
+        console.log(this.player.position);
+    }
+
     movePlayer() {
         const player = document.createElement('span');
         const playerClass = document.querySelector('span.player-position');
-        const container = document.querySelector('.container-player-position');
-        console.log(container);
-        console.log(playerClass);
+        //console.log(playerClass);
         playerClass.remove();
         player.classList.add('player-position');
-        document.querySelector(`div[data-position='${this.currentDice}'] div.container div.container-player-position`).appendChild(player);
-        
+        document.querySelector(`div[data-position='${this.player.position}'] div.container div.container-player-position`).appendChild(player);
     }
+
+    /*** THROW DICE AND DRAW DICE RESULT ***/
 
     throwDice() {
         this.currentDice = this.dice.throw();
         this.drawDice(this.currentDice);
+        this.playerPosition();
         this.movePlayer();
+        
     }
 }

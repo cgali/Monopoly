@@ -54,7 +54,7 @@ body {
     color: white;
     width: 1em;
     height: 1em;
-    font-family: 'Bangers', cursive;
+    font-family: 'Indie Flower', cursive;
     border: 4px solid white;
     border-radius: 8px;
 }
@@ -180,6 +180,9 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.black, .white, .blue {
+    display: none;
 }
 
 /*** TITLE ***/
@@ -468,7 +471,7 @@ body {
     text-align: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /*** TITLE ***/
