@@ -24,11 +24,43 @@ body {
 ******* GAME PAGE *******
 *************************/
 
-/*** DICE AND CHRONO DISPLAY ***/
+/*** DICE, CHRONO AND MONEY DISPLAY ***/
 
 .interface {
     display: flex;
-    
+}
+
+/*** MONEY DISPLAY ***/
+
+.money-container {
+    background-color: black;
+    color: white;
+    font-size: 2.4em;
+    width: 9em;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 30px;
+    border: 3px solid red;
+    border-radius: 10px;
+    margin-left: 20%;
+}
+
+.player-name {
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    border-radius: 3px;
+    color: white;
+}
+
+#money-count {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6em;
 }
 
 /*** DICE BUTTON AND NUMBER ***/
@@ -40,7 +72,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 40%;
+    margin-left: 5%;
     margin-top: 30px;
     border: 3px solid black;
     border-radius: 10px;

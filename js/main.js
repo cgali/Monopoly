@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const buttonStart = document.getElementById('start');
     buttonStart.addEventListener('click', ()=> {
-        game = new Game(drawDiceResult, drawTimer);
+        game = new Game(drawDiceResult, drawTimer, drawMoney);
         game.startGame();
         document.getElementById("chrono-continue-button").disabled = true;
     })
@@ -42,6 +42,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
 
     /***  DRAW FUNCTIONS ***/
+
+    function drawMoney() {
+        const moneyCount = document.getElementById("money-count");
+        moneyCount.innerText = this.player.money
+    }
 
     function drawDiceResult(result) {
         const numDice = document.getElementById('num-dice');

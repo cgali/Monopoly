@@ -1,14 +1,16 @@
 // controller model
 
 class Game{
-    constructor(drawDiceResult, drawTimer) {
+    constructor(drawDiceResult, drawTimer, drawMoney) {
         this.dice = new Dice();
         this.drawDice = drawDiceResult;
         this.chrono = new Chrono();
-        this.drawTimer = drawTimer;
+        this.drawTimerCurrent = drawTimer;
         this.timerInterval = undefined;
         this.currentDice = 0;
         this.player = new Player();
+        this.currentDrawMoney = drawMoney;
+        this.currentMoney = 0;
     }
 
     /*** BUTTONS ***/
@@ -29,6 +31,7 @@ class Game{
     resetGame() {
         this.chrono.reset();
         this.player.position = 1;
+        this.player.money = 4000;
         this.currentDice = 0;
         this.playerPosition();
         this.movePlayer();
@@ -39,6 +42,7 @@ class Game{
         clearInterval(this.timerInterval);
         this.timerInterval = undefined;
         this.player.position = 1;
+        this.player.money = 4000;
         this.currentDice = 0;
         this.playerPosition();
         this.movePlayer();
@@ -48,7 +52,7 @@ class Game{
 
     drawTimeChrono() {
         this.timerInterval = setInterval(() =>{
-            this.drawTimer(this.chrono.counterSec, this.chrono.counterMin);
+            this.drawTimerCurrent(this.chrono.counterSec, this.chrono.counterMin);
         }, 1000);
     }
 
@@ -72,10 +76,14 @@ class Game{
         document.querySelector(`div[data-position='${this.player.position}'] div.container div.container-player-position`).appendChild(player);
     }
 
-    industriesBox() {
-        const price = document.querySelector(`div[data-position='${this.player.position}'] data-price`);
-        console.log(price);
-    }
+    /*** MONEY SUM AND SUBSTRACTION ***/
+
+    // industriesBox() {
+    //     const priceContainer = document.querySelector(`div[data-position='${this.player.position}'] div.price`);
+    //     this.player.money = parseInt(this.player.money) + parseInt(priceContainer.dataset.price);
+    //     console.log(priceContainer.dataset.price);
+    //     console.log(this.player.money);
+    // }
 
     /*** THROW DICE AND DRAW DICE RESULT ***/
 
@@ -84,7 +92,8 @@ class Game{
         this.drawDice(this.currentDice);
         this.playerPosition();
         this.movePlayer();
-        this.industriesBox()
+        this.currentMoney = this.player.industriesBox();
+        this.currentDrawMoney(this.currentMoney);
         
     }
 }

@@ -1,6 +1,6 @@
 class Dice {
     constructor() {
-        this.numFaces = 8;
+        this.numFaces = 6;
     }
 
     throw() {
