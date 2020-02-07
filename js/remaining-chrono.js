@@ -34,6 +34,9 @@ class RemainingChrono {
                 this.stop();
                 this.start();
             }
+            else if (this.counterSeconds < 10) {
+                this.counterSeconds = "0" + this.counterSeconds;
+            }
         }, 1000);
     }
 }

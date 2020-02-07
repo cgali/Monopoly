@@ -31,6 +31,7 @@ class Game{
     continueGame() {
         this.chrono.continue();
         this.remainingChrono.continue();
+        this.drawTimerRemaining();
     }
 
     pauseGame() {
@@ -46,6 +47,7 @@ class Game{
         this.player.position = 1;
         this.player.money = 8000;
         this.currentDice = 0;
+        this.drawDice(this.currentDice);
         this.playerPosition();
         this.movePlayer();
         this.currentDrawMoney(this.currentMoney);
