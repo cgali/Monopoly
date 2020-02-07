@@ -27,7 +27,6 @@ class Chrono {
             } else if (this.counterSec < 10) {
                 this.counterSec = "0" + this.counterSec;
             }
-            //console.log('timer', this.counterSec, this.counterMin)
         }, 1000);
     }
 
@@ -64,7 +63,6 @@ class Chrono {
             } else if (this.counterSec < 10) {
                 this.counterSec = "0" + this.counterSec;
             }
-            //console.log('timer', this.counterSec, this.counterMin)
         }, 1000);
     }
 

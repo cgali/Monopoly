@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const buttonStart = document.getElementById('start');
     buttonStart.addEventListener('click', ()=> {
-        game = new Game(drawDiceResult, drawTimer, drawMoney);
+        game = new Game(drawDiceResult, drawTimer, drawMoney, drawRemainingChrono);
         game.startGame();
         document.getElementById("chrono-continue-button").disabled = true;
     })
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function drawMoney() {
         const moneyCount = document.getElementById("money-count");
-        moneyCount.innerText = this.player.money
+        moneyCount.innerText = this.player.money + "€";
     }
 
     function drawDiceResult(result) {
@@ -54,7 +54,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function drawTimer(seconds, minutes) {
-        //console.log(seconds, minutes);
-        document.querySelector('.chrono-display').innerHTML = `<span class='counter'>${minutes} : ${seconds}</span>`;
+        document.querySelector('.chrono-display').innerHTML = `<span class='counter'>${minutes}:${seconds}</span>`;
+    }
+
+    function drawRemainingChrono(seconds) {
+        document.getElementById("remaining-sec").innerText = seconds;
     }
 });
