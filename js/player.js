@@ -5,11 +5,11 @@ class Player {
         this.money = 2000;
     }
 
-    industriesBox() {
-        const price = document.querySelector(`div[data-position='${this.player.position}'] div.price`);
-        this.money += price;
-        console.log(price);
-    }
+    // industriesBox() {
+    //     const price = document.querySelector(`div[data-position='${this.player.position}'] data-price`);
+    //     this.money += price;
+    //     console.log(price);
+    // }
 
 
 }

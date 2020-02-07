@@ -55,10 +55,9 @@ class Game{
     /*** MOVE PLAYER ***/
 
     playerPosition() {
-        if (this.player.position > 32) {
-            this.player.position = this.player.position % 32;
-        } else {
-            this.player.position += this.currentDice;
+        this.player.position = (this.currentDice  + this.player.position) % 32;
+        if (this.player.position === 0) {
+            this.player.position += 1;
         }
         
         console.log(this.player.position);
@@ -73,6 +72,11 @@ class Game{
         document.querySelector(`div[data-position='${this.player.position}'] div.container div.container-player-position`).appendChild(player);
     }
 
+    industriesBox() {
+        const price = document.querySelector(`div[data-position='${this.player.position}'] data-price`);
+        console.log(price);
+    }
+
     /*** THROW DICE AND DRAW DICE RESULT ***/
 
     throwDice() {
@@ -80,6 +84,7 @@ class Game{
         this.drawDice(this.currentDice);
         this.playerPosition();
         this.movePlayer();
+        this.industriesBox()
         
     }
 }
